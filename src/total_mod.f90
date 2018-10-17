@@ -1,30 +1,22 @@
 Module total_mod
     Implicit None
-    Type :: CArray_1D
+    Type CArray_1D
         Integer :: Dimen=1
         Integer, Allocatable, Dimension(:) :: lower, upper
         Character(LEN=1024), Allocatable, Dimension(:) :: Data
-    End Type CArray_1D
+    End Type
 Contains
     Subroutine Read_Data ( FILE, Data_up )
         Class(*), Pointer,          intent(in)    :: Data_up
         Character(Len=*),           intent(in)    :: FILE
-        Integer                   :: i, LU
-        Character(LEN=11)         :: FORM
-        Logical                   :: Binary
-        FORM = 'formatted'
-        Binary = .false.
-        Open ( newunit=LU, file=trim(FILE), status='old', form=trim(FORM), action='read' )
-DUPtyp: Select Type ( Data_up )
+        Integer                   :: LU
+        Open ( newunit=LU, file=trim(FILE), status='old', form=trim('formatted'), action='read' )
+        Select Type ( Data_up )
             Type is ( CArray_1D )
-                Call Read_CArray_1D ( LU, Binary, Data_up )
-print *, 'Read_Write_Basic_Mod: Data_up%upper(1) = ', Data_up%upper(1)
-do i = 1, Data_up%upper(1)
-print *, '                      Data_up%Data(i)  = ', i, trim(Data_up%Data(i))
-enddo
-        End Select DUPTyp
+                Call Read_CArray_1D ( LU, Data_up )
+        End Select
         Close ( unit=LU )
-    End Subroutine Read_Data
+    End Subroutine
   Subroutine Read_TRNINPUT ( FILE)
     Character(Len=*),                                            intent(in)  :: FILE
     Integer                                                                  :: i
@@ -40,18 +32,13 @@ print *, 'Read_Write_TRNINPUT: A_t%Data(i) = ', i, trim(A_t%Data(i)), '    ---  
 end do
     End Select
   End Subroutine
-    Subroutine Read_CArray_1D ( LU, Binary, D )
+    Subroutine Read_CArray_1D ( LU, D )
         Integer, intent(in) :: LU
-        Logical, intent(in) :: Binary
         Type ( CArray_1D ), intent(out) :: D
         Integer :: i
         Allocate ( D%lower(d%Dimen), D%upper(d%Dimen) )
         Read ( unit=LU, fmt=* ) (D%lower(i), D%upper(i), i=1,D%Dimen)
         Allocate ( D%Data(D%lower(D%Dimen):D%upper(D%Dimen)) )
         Read ( unit=LU, fmt=* ) D%Data
-print *, 'Type_CArray_1D_Mod: D%upper(1) = ', D%upper(1)
-do i = 1, D%upper(1)
-print *, 'Type_CArray_1D_Mod: D%Data(i)  = ', i, trim(D%Data(i))
-enddo
-    End Subroutine Read_CArray_1D
+    End Subroutine
 End Module
