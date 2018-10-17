@@ -1,12 +1,9 @@
 Module total_mod
     Implicit None
-    Integer, Parameter :: CLEN_SIZE = 1024
-    Integer, Parameter :: IOMSG_SIZE = 120
-    Logical, Parameter :: G_BINARY = .false.        ! Default value is ASCII input/output - change to .true. to be Binary input/output
     Type :: CArray_1D
         Integer :: Dimen=1
         Integer, Allocatable, Dimension(:) :: lower, upper
-        Character(LEN=CLEN_SIZE), Allocatable, Dimension(:) :: Data
+        Character(LEN=1024), Allocatable, Dimension(:) :: Data
     End Type CArray_1D
 Contains
     Subroutine Read_Data ( FILE, Data_up )
