@@ -9,11 +9,10 @@ Module total_mod
         Character(LEN=CLEN_SIZE), Allocatable, Dimension(:) :: Data
     End Type CArray_1D
 Contains
-    Subroutine Read_Data ( FILE, Data_up, ACCESS)
+    Subroutine Read_Data ( FILE, Data_up )
         Implicit None
         Class(*), Pointer,          intent(in)    :: Data_up
         Character(Len=*),           intent(in)    :: FILE
-        Character(Len=3), Optional, intent(in)    :: ACCESS
         Integer                   :: i, LU
         Character(LEN=11)         :: FORM
         Logical                   :: Binary
@@ -30,17 +29,14 @@ enddo
         End Select DUPTyp
         Close ( unit=LU )
     End Subroutine Read_Data
-  Subroutine Read_TRNINPUT ( FILE, u, C, ACCESS)
+  Subroutine Read_TRNINPUT ( FILE)
     Implicit None
-    Integer,                  Target,                            intent(out) :: u
-    Character(LEN=CLEN_SIZE), Target, Allocatable, Dimension(:), intent(out) :: C
     Character(Len=*),                                            intent(in)  :: FILE
-    Character(Len=3), Optional,                                  intent(in)  :: ACCESS
     Integer                                                                  :: i
     Type (CArray_1D),         Target                                         :: A_t
     Class(*),                 Pointer                                        :: Data_up
     Data_up => A_t
-    Call Read_Data ( FILE, Data_up, ACCESS )
+    Call Read_Data ( FILE, Data_up )
     Select Type ( Data_up )
     Type is ( CArray_1D )
 print *, 'Read_Write_TRNINPUT: A_t%upper   = ', A_t%upper(1), '    ---    SHOULD BE 3 but is not'
