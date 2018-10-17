@@ -3,10 +3,6 @@ Module total_mod
     Integer, Parameter :: CLEN_SIZE = 1024
     Integer, Parameter :: IOMSG_SIZE = 120
     Logical, Parameter :: G_BINARY = .false.        ! Default value is ASCII input/output - change to .true. to be Binary input/output
-    Private
-    Public :: Read_Data
-    Public :: Read_CArray_1D
-    Public :: CArray_1D
     Type :: CArray_1D
         Integer :: Dimen=1
         Integer, Allocatable, Dimension(:) :: lower, upper
