@@ -7,7 +7,6 @@ Module total_mod
     End Type CArray_1D
 Contains
     Subroutine Read_Data ( FILE, Data_up )
-        Implicit None
         Class(*), Pointer,          intent(in)    :: Data_up
         Character(Len=*),           intent(in)    :: FILE
         Integer                   :: i, LU
@@ -27,7 +26,6 @@ enddo
         Close ( unit=LU )
     End Subroutine Read_Data
   Subroutine Read_TRNINPUT ( FILE)
-    Implicit None
     Character(Len=*),                                            intent(in)  :: FILE
     Integer                                                                  :: i
     Type (CArray_1D),         Target                                         :: A_t
@@ -43,7 +41,6 @@ end do
     End Select
   End Subroutine
     Subroutine Read_CArray_1D ( LU, Binary, D )
-        Implicit None
         Integer, intent(in) :: LU
         Logical, intent(in) :: Binary
         Type ( CArray_1D ), intent(out) :: D
