@@ -9,14 +9,11 @@ Module total_mod
         Character(LEN=CLEN_SIZE), Allocatable, Dimension(:) :: Data
     End Type CArray_1D
 Contains
-    Subroutine Read_Data ( FILE, Data_up, ACCESS, OBytes, Opt_Int, Quite )
+    Subroutine Read_Data ( FILE, Data_up, ACCESS)
         Implicit None
         Class(*), Pointer,          intent(in)    :: Data_up
         Character(Len=*),           intent(in)    :: FILE
         Character(Len=3), Optional, intent(in)    :: ACCESS
-        Integer, Optional,          intent(out)   :: OBytes
-        Integer, Optional,          intent(inout) :: Opt_Int
-        Integer, Optional,          intent(in)    :: Quite
         Integer                   :: i, LU
         Character(LEN=11)         :: FORM
         Logical                   :: Binary
