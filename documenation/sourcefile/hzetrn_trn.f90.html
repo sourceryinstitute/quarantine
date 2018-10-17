@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A bug isolation demo">
+    
+    <meta name="author" content="" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>hzetrn_trn.f90 &ndash; quarantine</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">quarantine </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/hzetrn_trn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/hzetrn_trn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>hzetrn_trn.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 7.9% of total for source files.">32 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/hzetrn_trn.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">hzetrn_trn.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/hzetrn_trn.html">HZETRN_TRN</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/hzetrn_trn.f90.html#src">hzetrn_trn.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~hzetrn_trn.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilehzetrn_trnf90EfferentGraph" width="641pt" height="136pt"
+ viewBox="0.00 0.00 641.00 136.47" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph" class="graph" transform="scale(.7747 .7747) rotate(0) translate(4 172.1461)">
+<title>sourcefile~~hzetrn_trn.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-172.1461 823.3779,-172.1461 823.3779,4 -4,4"/>
+<!-- sourcefile~hzetrn_trn.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~hzetrn_trn.f90</title>
+<polygon fill="none" stroke="#000000" points="819.2729,-98.2554 742.6937,-98.2554 742.6937,-76.2446 819.2729,-76.2446 819.2729,-98.2554"/>
+<text text-anchor="middle" x="780.9833" y="-84.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">hzetrn_trn.f90</text>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~read_write_trninput_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/read_write_trninput_mod.f90.html" xlink:title="Read_Write_TRNINPUT_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="696.9204,-119.2554 527.0181,-119.2554 527.0181,-97.2446 696.9204,-97.2446 696.9204,-119.2554"/>
+<text text-anchor="middle" x="611.9692" y="-105.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_TRNINPUT_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_trninput_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_trninput_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742.6314,-92.0152C731.8723,-93.352 719.6733,-94.8678 707.1567,-96.423"/>
+<polygon fill="#000000" stroke="#000000" points="706.5641,-92.9696 697.072,-97.676 707.4273,-99.9162 706.5641,-92.9696"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~read_write_target_material_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node3"><a xlink:href=".././sourcefile/read_write_target_material_mod.f90.html" xlink:title="Read_Write_Target_Material_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="706.7082,-78.2554 517.2303,-78.2554 517.2303,-56.2446 706.7082,-56.2446 706.7082,-78.2554"/>
+<text text-anchor="middle" x="611.9692" y="-64.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_Target_Material_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742.6314,-82.7117C734.2463,-81.7195 724.9866,-80.6237 715.3837,-79.4874"/>
+<polygon fill="#000000" stroke="#000000" points="715.6164,-75.9906 705.2743,-78.2911 714.7937,-82.9421 715.6164,-75.9906"/>
+</g>
+<!-- sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~type_target_material_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node4"><a xlink:href=".././sourcefile/type_target_material_mod.f90.html" xlink:title="Type_Target_Material_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="302.6796,-22.2554 146.1705,-22.2554 146.1705,-.2446 302.6796,-.2446 302.6796,-22.2554"/>
+<text text-anchor="middle" x="224.425" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Type_Target_Material_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M765.0048,-76.0872C750.4933,-66.5952 728.1267,-53.5351 706.5886,-47.25 573.5046,-8.4146 411.4578,-4.7042 313.2082,-6.9614"/>
+<polygon fill="#000000" stroke="#000000" points="312.9282,-3.4673 303.021,-7.2221 313.1074,-10.465 312.9282,-3.4673"/>
+</g>
+<!-- sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~parameters_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node5"><a xlink:href=".././sourcefile/parameters_mod.f90.html" xlink:title="Parameters_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="110.0718,-80.2554 -.0239,-80.2554 -.0239,-58.2446 110.0718,-58.2446 110.0718,-80.2554"/>
+<text text-anchor="middle" x="55.0239" y="-66.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Parameters_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M765.6372,-98.4031C751.192,-108.2235 728.5525,-121.9181 706.5886,-128.25 500.6794,-187.6108 433.7449,-174.1578 224.425,-128.25"/>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M224.425,-128.25C189.414,-120.5714 180.004,-120.7268 146.0479,-109.25 125.7656,-102.3948 103.77,-92.7928 86.4823,-84.7147"/>
+<polygon fill="#000000" stroke="#000000" points="87.9385,-81.5317 77.4032,-80.4108 84.9401,-87.857 87.9385,-81.5317"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-127.25C327.5636,-127.0236 305.0222,-145.9265 224.425,-128.25"/>
+</g>
+<!-- sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~type_carray_1d_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node6"><a xlink:href=".././sourcefile/type_carray_1d_mod.f90.html" xlink:title="Type_CArray_1D_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="292.7438,-100.2554 156.1063,-100.2554 156.1063,-78.2446 292.7438,-78.2446 292.7438,-100.2554"/>
+<text text-anchor="middle" x="224.425" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Type_CArray_1D_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M532.5429,-119.2934C495.416,-123.5382 450.5625,-127.3611 410.076,-127.25"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-127.25C360.6077,-127.1142 305.2032,-114.0284 267.9017,-103.252"/>
+<polygon fill="#000000" stroke="#000000" points="268.463,-99.7681 257.8808,-100.2864 266.4765,-106.4803 268.463,-99.7681"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~read_write_basic_mod.f90</title>
+<g id="a_sourcefile~~hzetrn_trn.f90~~EfferentGraph_node7"><a xlink:href=".././sourcefile/read_write_basic_mod.f90.html" xlink:title="Read_Write_Basic_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="481.1244,-99.2554 339.0277,-99.2554 339.0277,-77.2446 481.1244,-77.2446 481.1244,-99.2554"/>
+<text text-anchor="middle" x="410.076" y="-85.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_Basic_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M526.9335,-99.8262C515.1812,-98.662 503.1337,-97.4685 491.45,-96.3111"/>
+<polygon fill="#000000" stroke="#000000" points="491.589,-92.8078 481.2926,-95.3049 490.8989,-99.7737 491.589,-92.8078"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-49.25C363.9701,-44.8976 312.4363,-33.8423 275.3841,-24.7714"/>
+<polygon fill="#000000" stroke="#000000" points="275.8831,-21.289 265.334,-22.2728 274.1941,-28.0822 275.8831,-21.289"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.2023,-59.0058C483.3881,-56.0099 445.0226,-52.549 410.076,-49.25"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-49.25C327.9285,-41.4953 306.9362,-49.7396 224.425,-50.25"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M224.425,-50.25C189.8437,-50.4639 151.5367,-54.4413 120.1105,-58.7018"/>
+<polygon fill="#000000" stroke="#000000" points="119.5824,-55.2415 110.1625,-60.0906 120.5504,-62.1743 119.5824,-55.2415"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.2297,-77.1044C508.635,-77.9983 499.9801,-78.8986 491.5154,-79.7791"/>
+<polygon fill="#000000" stroke="#000000" points="490.8857,-76.3256 481.3015,-80.8415 491.61,-83.288 490.8857,-76.3256"/>
+</g>
+<!-- sourcefile~type_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~type_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M188.8236,-22.2829C175.3809,-26.5334 159.9733,-31.5068 146.0479,-36.25 129.0498,-42.0397 110.3876,-48.7439 94.4101,-54.5911"/>
+<polygon fill="#000000" stroke="#000000" points="93.0267,-51.3706 84.8477,-58.1053 95.4413,-57.941 93.0267,-51.3706"/>
+</g>
+<!-- sourcefile~type_carray_1d_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~type_carray_1d_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M156.0114,-81.1729C144.2218,-79.781 131.9947,-78.3374 120.2908,-76.9556"/>
+<polygon fill="#000000" stroke="#000000" points="120.5059,-73.4568 110.1645,-75.7601 119.6851,-80.4085 120.5059,-73.4568"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M371.7992,-77.2315C360.8485,-73.4433 349.0973,-68.7469 338.8022,-63.25 321.1596,-53.83 320.5777,-45.4169 302.8022,-36.25 294.9627,-32.2071 286.3443,-28.6599 277.779,-25.6045"/>
+<polygon fill="#000000" stroke="#000000" points="278.7696,-22.2449 268.1754,-22.3636 276.5313,-28.8774 278.7696,-22.2449"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M377.2893,-77.2345C340.5124,-65.8937 278.8724,-49.9132 224.425,-50.25"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~hzetrn_trn.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M338.8295,-88.6338C327.1245,-88.6968 314.9349,-88.7625 303.0624,-88.8264"/>
+<polygon fill="#000000" stroke="#000000" points="302.7118,-85.3282 292.7308,-88.8821 302.7495,-92.3281 302.7118,-85.3282"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefilehzetrn_trnf90EfferentGraph = svgPanZoom('#sourcefilehzetrn_trnf90EfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+    
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/hzetrn_trn.html">HZETRN_TRN</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/hzetrn_trn.f90.html#src">hzetrn_trn.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="k">Program </span><span class="n">HZETRN_TRN</span>
+<a name="ln-2"></a><span class="c">!</span>
+<a name="ln-3"></a>    <span class="k">Use </span><span class="n">Parameters_Mod</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a>    <span class="k">Use </span><span class="n">Type_Target_Material_Mod</span>
+<a name="ln-6"></a><span class="c">!</span>
+<a name="ln-7"></a>    <span class="k">Use </span><span class="n">Read_Write_Target_Material_Mod</span>
+<a name="ln-8"></a>    <span class="k">Use </span><span class="n">Read_Write_TRNINPUT_Mod</span>
+<a name="ln-9"></a><span class="c">!</span>
+<a name="ln-10"></a><span class="c">!================================================================================</span>
+<a name="ln-11"></a><span class="c">!================================================================================</span>
+<a name="ln-12"></a><span class="c">!                               Define Data</span>
+<a name="ln-13"></a><span class="c">!================================================================================</span>
+<a name="ln-14"></a><span class="c">!================================================================================</span>
+<a name="ln-15"></a><span class="c">!</span>
+<a name="ln-16"></a><span class="c">!********************************************************************************</span>
+<a name="ln-17"></a><span class="c">! This program illistrates an error</span>
+<a name="ln-18"></a><span class="c">!********************************************************************************</span>
+<a name="ln-19"></a><span class="c">!</span>
+<a name="ln-20"></a>    <span class="k">Implicit None</span>
+<a name="ln-21"></a><span class="c">!</span>
+<a name="ln-22"></a><span class="c">!********************************************************************************</span>
+<a name="ln-23"></a><span class="c">! Do loop indexes and local variables</span>
+<a name="ln-24"></a><span class="c">!********************************************************************************</span>
+<a name="ln-25"></a><span class="c">!</span>
+<a name="ln-26"></a>    <span class="kt">Integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
+<a name="ln-27"></a><span class="c">!</span>
+<a name="ln-28"></a><span class="c">!********************************************************************************</span>
+<a name="ln-29"></a><span class="c">! File I/O</span>
+<a name="ln-30"></a><span class="c">!********************************************************************************</span>
+<a name="ln-31"></a><span class="c">!</span>
+<a name="ln-32"></a>    <span class="kt">Character</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="n">CLEN_SIZE</span><span class="p">)</span> <span class="kd">::</span> <span class="k">FILE</span>
+<a name="ln-33"></a><span class="c">!</span>
+<a name="ln-34"></a><span class="c">!********************************************************************************</span>
+<a name="ln-35"></a><span class="c">! TRNInput</span>
+<a name="ln-36"></a><span class="c">!********************************************************************************</span>
+<a name="ln-37"></a><span class="c">!</span>
+<a name="ln-38"></a>    <span class="kt">Integer</span>                                                             <span class="kd">::</span> <span class="n">Num_Mats_loc</span>
+<a name="ln-39"></a>    <span class="kt">Character</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="n">CLEN_SIZE</span><span class="p">),</span> <span class="k">Allocatable</span><span class="p">,</span> <span class="k">Dimension</span><span class="p">(:)</span>                 <span class="kd">::</span> <span class="n">Mat_Name_loc</span>
+<a name="ln-40"></a><span class="c">!</span>
+<a name="ln-41"></a><span class="c">!********************************************************************************</span>
+<a name="ln-42"></a><span class="c">! Target Material</span>
+<a name="ln-43"></a><span class="c">!********************************************************************************</span>
+<a name="ln-44"></a><span class="c">!</span>
+<a name="ln-45"></a>    <span class="k">Type</span> <span class="p">(</span> <span class="n">Target_Material</span> <span class="p">),</span> <span class="k">Allocatable</span><span class="p">,</span> <span class="k">Dimension</span><span class="p">(:)</span>                 <span class="kd">::</span> <span class="n">TM_mat_loc</span>
+<a name="ln-46"></a><span class="c">!</span>
+<a name="ln-47"></a><span class="c">!********************************************************************************</span>
+<a name="ln-48"></a><span class="c">! Read TRNINPUT</span>
+<a name="ln-49"></a><span class="c">!********************************************************************************</span>
+<a name="ln-50"></a><span class="c">!</span>
+<a name="ln-51"></a>    <span class="k">FILE</span> <span class="o">=</span> <span class="s1">&#39;trninput.dat&#39;</span>
+<a name="ln-52"></a>    <span class="k">Call </span><span class="n">Read_TRNINPUT</span> <span class="p">(</span> <span class="k">FILE</span><span class="p">,</span> <span class="n">Num_Mats_loc</span><span class="p">,</span> <span class="n">Mat_Name_loc</span><span class="p">,</span> <span class="s1">&#39;ASC&#39;</span> <span class="p">)</span>
+<a name="ln-53"></a><span class="c">!</span>
+<a name="ln-54"></a>    <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Num_Mats_loc = &#39;</span><span class="p">,</span> <span class="n">Num_Mats_loc</span>
+<a name="ln-55"></a>    <span class="k">Do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Num_Mats_loc</span>
+<a name="ln-56"></a>       <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Mat_Name_loc =&#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">Mat_Name_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span> <span class="s1">&#39;-&#39;</span>
+<a name="ln-57"></a>    <span class="k">End Do</span>
+<a name="ln-58"></a><span class="c">!</span>
+<a name="ln-59"></a><span class="c">!********************************************************************************</span>
+<a name="ln-60"></a><span class="c">! Read TM</span>
+<a name="ln-61"></a><span class="c">!********************************************************************************</span>
+<a name="ln-62"></a><span class="c">!</span>
+<a name="ln-63"></a>       <span class="k">Call </span><span class="n">Read_TM</span> <span class="p">(</span> <span class="n">Num_Mats_loc</span><span class="p">,</span> <span class="n">Mat_Name_loc</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">,</span> <span class="s1">&#39;ASC&#39;</span> <span class="p">)</span>
+<a name="ln-64"></a><span class="c">!</span>
+<a name="ln-65"></a>       <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;TM_Mat_loc allocated? : &#39;</span><span class="p">,</span> <span class="nb">Allocated</span><span class="p">(</span><span class="n">TM_Mat_loc</span><span class="p">)</span>
+<a name="ln-66"></a>       <span class="k">Do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Num_Mats_loc</span>
+<a name="ln-67"></a>          <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;p_read: TM_Mat_loc Name, Number, Density: &#39;</span>
+<a name="ln-68"></a>          <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Name</span><span class="p">),</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Num_Isotopes</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Density</span>
+<a name="ln-69"></a>          <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;TM_Mat_loc(i)%A allocated? : &#39;</span><span class="p">,</span> <span class="nb">Allocated</span><span class="p">(</span><span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">A_Target_Material</span><span class="p">)</span>
+<a name="ln-70"></a>          <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;TM_Mat_loc(i)%Z allocated? : &#39;</span><span class="p">,</span> <span class="nb">Allocated</span><span class="p">(</span><span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Z_Target_Material</span><span class="p">)</span>
+<a name="ln-71"></a>          <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;TM_Mat_loc(i)%D allocated? : &#39;</span><span class="p">,</span> <span class="nb">Allocated</span><span class="p">(</span><span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">D_Target_Material</span><span class="p">)</span>
+<a name="ln-72"></a>          <span class="k">Do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Num_Isotopes</span>
+<a name="ln-73"></a>             <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;A: &#39;</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">A_Target_Material</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-74"></a>             <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Z: &#39;</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">Z_Target_Material</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-75"></a>             <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;D: &#39;</span><span class="p">,</span> <span class="n">TM_Mat_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">D_Target_Material</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-76"></a>          <span class="k">End Do</span>
+<a name="ln-77"></a><span class="k">       End Do</span>
+<a name="ln-78"></a><span class="c">!</span>
+<a name="ln-79"></a><span class="c">!********************************************************************************</span>
+<a name="ln-80"></a><span class="c">! End of Program</span>
+<a name="ln-81"></a><span class="c">!********************************************************************************</span>
+<a name="ln-82"></a><span class="c">!</span>
+<a name="ln-83"></a><span class="k">End Program </span><span class="n">HZETRN_TRN</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2018 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2018-10-16 22:22  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> quarantine was developed by </p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

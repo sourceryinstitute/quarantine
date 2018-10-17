@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A bug isolation demo">
+    
+    <meta name="author" content="" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Parameters_Mod.f90 &ndash; quarantine</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">quarantine </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/hzetrn_trn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/hzetrn_trn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>Parameters_Mod.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.7% of total for source files.">11 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/Parameters_Mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">Parameters_Mod.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/parameters_mod.html">Parameters_Mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/parameters_mod.f90.html#src">Parameters_Mod.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~parameters_mod.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefileparameters_modf90AfferentGraph" width="641pt" height="140pt"
+ viewBox="0.00 0.00 641.00 140.16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph" class="graph" transform="scale(.7747 .7747) rotate(0) translate(4 176.9169)">
+<title>sourcefile~~parameters_mod.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-176.9169 823.3779,-176.9169 823.3779,4 -4,4"/>
+<!-- sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~parameters_mod.f90</title>
+<polygon fill="none" stroke="#000000" points="110.0718,-100.121 -.0239,-100.121 -.0239,-78.1102 110.0718,-78.1102 110.0718,-100.121"/>
+<text text-anchor="middle" x="55.0239" y="-85.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">Parameters_Mod.f90</text>
+</g>
+<!-- sourcefile~hzetrn_trn.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~hzetrn_trn.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/hzetrn_trn.f90.html" xlink:title="hzetrn_trn.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="819.2729,-139.121 742.6937,-139.121 742.6937,-117.1102 819.2729,-117.1102 819.2729,-139.121"/>
+<text text-anchor="middle" x="780.9833" y="-124.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">hzetrn_trn.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-167.1156C327.6017,-164.6363 305.8192,-180.6487 224.425,-167.1156"/>
+</g>
+<!-- sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~type_target_material_mod.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/type_target_material_mod.f90.html" xlink:title="Type_Target_Material_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="302.6796,-139.121 146.1705,-139.121 146.1705,-117.1102 302.6796,-117.1102 302.6796,-139.121"/>
+<text text-anchor="middle" x="224.425" y="-124.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Type_Target_Material_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-167.1156C361.8248,-164.5885 307.9063,-152.1497 270.6624,-141.9894"/>
+<polygon fill="#000000" stroke="#000000" points="271.1907,-138.5035 260.6184,-139.1942 269.3139,-145.2472 271.1907,-138.5035"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M745.7269,-139.1317C733.4543,-142.5543 719.5211,-145.9846 706.5886,-148.1156 576.292,-169.5854 541.9489,-174.0223 410.076,-167.1156"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~read_write_target_material_mod.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node4"><a xlink:href=".././sourcefile/read_write_target_material_mod.f90.html" xlink:title="Read_Write_Target_Material_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="706.7082,-139.121 517.2303,-139.121 517.2303,-117.1102 706.7082,-117.1102 706.7082,-139.121"/>
+<text text-anchor="middle" x="611.9692" y="-124.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_Target_Material_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742.6314,-128.1156C734.6206,-128.1156 725.8117,-128.1156 716.6678,-128.1156"/>
+<polygon fill="#000000" stroke="#000000" points="716.6361,-124.6157 706.6361,-128.1156 716.636,-131.6157 716.6361,-124.6157"/>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~read_write_trninput_mod.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node5"><a xlink:href=".././sourcefile/read_write_trninput_mod.f90.html" xlink:title="Read_Write_TRNINPUT_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="696.9204,-98.121 527.0181,-98.121 527.0181,-76.1102 696.9204,-76.1102 696.9204,-98.121"/>
+<text text-anchor="middle" x="611.9692" y="-83.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_TRNINPUT_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_trninput_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~hzetrn_trn.f90&#45;&gt;sourcefile~read_write_trninput_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742.4546,-117.41C730.9445,-114.3059 718.279,-110.9828 706.5886,-108.1156 695.9533,-105.5072 684.6106,-102.8678 673.6075,-100.3819"/>
+<polygon fill="#000000" stroke="#000000" points="674.1512,-96.917 663.628,-98.1472 672.6216,-103.7478 674.1512,-96.917"/>
+</g>
+<!-- sourcefile~type_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~type_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M176.3346,-117.0441C156.5801,-112.4961 133.5357,-107.1908 112.8702,-102.4331"/>
+<polygon fill="#000000" stroke="#000000" points="113.4716,-98.9801 102.9412,-100.1472 111.901,-105.8016 113.4716,-98.9801"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M224.425,-167.1156C189.0672,-161.2368 178.9708,-162.2867 146.0479,-148.1156 120.7769,-137.2382 94.705,-119.561 76.9764,-106.3875"/>
+<polygon fill="#000000" stroke="#000000" points="79.0679,-103.581 68.9836,-100.3318 74.8407,-109.1605 79.0679,-103.581"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-129.1156C325.9682,-133.5047 307.5068,-180.9293 224.425,-167.1156"/>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-129.1156C378.5547,-130.7605 343.9823,-131.0006 313.3058,-130.67"/>
+<polygon fill="#000000" stroke="#000000" points="313.1064,-127.1672 303.0618,-130.5372 313.0156,-134.1666 313.1064,-127.1672"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.1683,-126.7421C483.351,-126.7395 444.9922,-127.2935 410.076,-129.1156"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~read_write_basic_mod.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node7"><a xlink:href=".././sourcefile/read_write_basic_mod.f90.html" xlink:title="Read_Write_Basic_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="481.1244,-100.121 339.0277,-100.121 339.0277,-78.1102 481.1244,-78.1102 481.1244,-100.121"/>
+<text text-anchor="middle" x="410.076" y="-85.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_Basic_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~read_write_target_material_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M554.9243,-117.0961C530.7332,-112.4231 502.3645,-106.9431 477.1756,-102.0773"/>
+<polygon fill="#000000" stroke="#000000" points="477.8123,-98.6357 467.3299,-100.1754 476.4846,-105.5086 477.8123,-98.6357"/>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-11.1156C293.3845,3.8661 257.5958,7.2799 146.0479,-30.1156 119.3484,-39.0664 92.784,-57.6904 75.3062,-71.6334"/>
+<polygon fill="#000000" stroke="#000000" points="73.0082,-68.9915 67.4954,-78.0392 77.4471,-74.4041 73.0082,-68.9915"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M592.1599,-75.9795C556.8999,-57.0138 480.3426,-19.6624 410.076,-11.1156"/>
+</g>
+<!-- sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~type_carray_1d_mod.f90</title>
+<g id="a_sourcefile~~parameters_mod.f90~~AfferentGraph_node6"><a xlink:href=".././sourcefile/type_carray_1d_mod.f90.html" xlink:title="Type_CArray_1D_Mod.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="292.7438,-61.121 156.1063,-61.121 156.1063,-39.1102 292.7438,-39.1102 292.7438,-61.121"/>
+<text text-anchor="middle" x="224.425" y="-46.9656" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Type_CArray_1D_Mod.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M410.076,-11.1156C383.9033,-7.7553 317.7564,-23.8823 271.9333,-36.4171"/>
+<polygon fill="#000000" stroke="#000000" points="270.9039,-33.0704 262.1986,-39.1092 272.7698,-39.8171 270.9039,-33.0704"/>
+</g>
+<!-- sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~read_write_trninput_mod.f90&#45;&gt;sourcefile~read_write_basic_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M526.9335,-87.958C515.1812,-88.0744 503.1337,-88.1937 491.45,-88.3095"/>
+<polygon fill="#000000" stroke="#000000" points="491.2575,-84.8111 481.2926,-88.4101 491.3269,-91.8108 491.2575,-84.8111"/>
+</g>
+<!-- sourcefile~type_carray_1d_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~type_carray_1d_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M176.3346,-61.1871C156.5801,-65.735 133.5357,-71.0404 112.8702,-75.7981"/>
+<polygon fill="#000000" stroke="#000000" points="111.901,-72.4295 102.9412,-78.0839 113.4716,-79.2511 111.901,-72.4295"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~parameters_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~parameters_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M338.6531,-89.1156C274.7759,-89.1156 181.9501,-89.1156 120.0916,-89.1156"/>
+<polygon fill="#000000" stroke="#000000" points="120.0589,-85.6157 110.0588,-89.1156 120.0588,-92.6157 120.0589,-85.6157"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_target_material_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M357.3725,-100.1871C335.4279,-104.7971 309.7787,-110.1852 286.8952,-114.9924"/>
+<polygon fill="#000000" stroke="#000000" points="286.0056,-111.6028 276.9388,-117.0839 287.4448,-118.4533 286.0056,-111.6028"/>
+</g>
+<!-- sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90 -->
+<g id="sourcefile~~parameters_mod.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~read_write_basic_mod.f90&#45;&gt;sourcefile~type_carray_1d_mod.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M357.3725,-78.0441C335.4279,-73.4341 309.7787,-68.046 286.8952,-63.2388"/>
+<polygon fill="#000000" stroke="#000000" points="287.4448,-59.7779 276.9388,-61.1472 286.0056,-66.6284 287.4448,-59.7779"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefileparameters_modf90AfferentGraph = svgPanZoom('#sourcefileparameters_modf90AfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/parameters_mod.html">Parameters_Mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/parameters_mod.f90.html#src">Parameters_Mod.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="k">Module </span><span class="n">Parameters_Mod</span>
+<a name="ln-2"></a><span class="c">!</span>
+<a name="ln-3"></a>    <span class="k">Implicit None</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-6"></a><span class="c">! Characters: Define the output format of all ASCII data written to a file.</span>
+<a name="ln-7"></a><span class="c">! Integers: Defines the data used to calulate sizes of read/write file</span>
+<a name="ln-8"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-9"></a><span class="c">!                                                         12345678901234567</span>
+<a name="ln-10"></a>    <span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=</span><span class="mi">17</span><span class="p">),</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">DATA_FORMAT_SIZE</span>   <span class="o">=</span> <span class="s1">&#39;(:,5(1x,1pe14.7))&#39;</span>
+<a name="ln-11"></a>    <span class="kt">Integer</span><span class="p">,</span> <span class="k">Parameter</span>           <span class="kd">::</span> <span class="n">ASCII_DATA_SIZE</span>    <span class="o">=</span>       <span class="mi">1</span> <span class="o">+</span>   <span class="mi">14</span>
+<a name="ln-12"></a><span class="c">!                                                         123456789012</span>
+<a name="ln-13"></a>    <span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=</span><span class="mi">12</span><span class="p">),</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">CDATA_FORMAT_SIZE</span>  <span class="o">=</span> <span class="s1">&#39;(:,(1x,a))&#39;</span>
+<a name="ln-14"></a><span class="c">!                                                         123456789012345</span>
+<a name="ln-15"></a>    <span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">BOUND_FORMAT_SIZE</span>  <span class="o">=</span> <span class="s1">&#39;(:,10(1x,i5.5))&#39;</span>
+<a name="ln-16"></a>    <span class="kt">Integer</span><span class="p">,</span> <span class="k">Parameter</span>           <span class="kd">::</span> <span class="n">ASCII_BOUND_SIZE</span>   <span class="o">=</span>        <span class="mi">1</span> <span class="o">+</span> <span class="mi">5</span>
+<a name="ln-17"></a><span class="c">!</span>
+<a name="ln-18"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-19"></a><span class="c">! Define the length of all string sizes</span>
+<a name="ln-20"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-21"></a><span class="c">!</span>
+<a name="ln-22"></a>    <span class="kt">Integer</span><span class="p">,</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">CLEN_SIZE</span> <span class="o">=</span> <span class="mi">1024</span>
+<a name="ln-23"></a>    <span class="kt">Integer</span><span class="p">,</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">IOMSG_SIZE</span> <span class="o">=</span> <span class="mi">120</span>
+<a name="ln-24"></a><span class="c">!</span>
+<a name="ln-25"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-26"></a><span class="c">! Data for default file format</span>
+<a name="ln-27"></a><span class="c">!       For Binary file formats: G_BINARY = .true.</span>
+<a name="ln-28"></a><span class="c">!       For ASCII file formats:  G_BINARY = .false.</span>
+<a name="ln-29"></a><span class="c">!**********************************************************************************************************************************</span>
+<a name="ln-30"></a><span class="c">!</span>
+<a name="ln-31"></a>    <span class="kt">Logical</span><span class="p">,</span> <span class="k">Parameter</span> <span class="kd">::</span> <span class="n">G_BINARY</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>        <span class="c">! Default value is ASCII input/output - change to .true. to be Binary input/output</span>
+<a name="ln-32"></a><span class="c">!</span>
+<a name="ln-33"></a><span class="k">End Module </span><span class="n">Parameters_Mod</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2018 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2018-10-16 22:22  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> quarantine was developed by </p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

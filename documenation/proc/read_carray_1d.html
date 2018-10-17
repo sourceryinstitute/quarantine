@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A bug isolation demo">
+    
+    <meta name="author" content="" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Read_CArray_1D &ndash; quarantine</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">quarantine </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/hzetrn_trn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/hzetrn_trn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>Read_CArray_1D
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="17.3% of total for procedures.">53 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/Type_CArray_1D_Mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/type_carray_1d_mod.f90.html'>Type_CArray_1D_Mod.f90</a></li>
+    
+     <li><a href='../module/type_carray_1d_mod.html'>Type_CArray_1D_Mod</a></li>
+    
+  
+     <li class="active">Read_CArray_1D</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/read_carray_1d.html#src">Read_CArray_1D</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine Read_CArray_1D(LU, Binary, D)
+    
+    
+   
+</h2>
+    
+  
+
+
+    
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  Called by Read_Write_Basic_Mod.f90</p>
+<hr>
+<p>This subroutine is for the CArray_1D derived type data read</p>
+<hr>
+<hr>
+<p>LU - The logical unit for input
+ Binary - Flag for binary or ASCII input
+ D - The data to pass back and is of type CArray_1D</p>
+<hr>
+<hr>
+<p>Make sure the upper pointer is not allocated</p>
+<hr>
+<hr>
+<p>Make sure the data pointer is not allocated</p>
+<hr>
+<hr>
+<p>Allocate the lower and upper array boundaries</p>
+<hr>
+<hr>
+<p>Read the lower and upper array boundaries from the data file: Binary or ASCII</p>
+<hr>
+<hr>
+<p>Allocate the data array</p>
+<hr>
+<hr>
+<p>Read the data array: Binary or ASCII</p>
+<hr>
+<hr>
+<p>Return to the calling program</p>
+<hr>
+<hr>
+<p>End for read CArray_1D</p>
+<hr>
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lu%7E3"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>LU</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-binary%7E4"></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Binary</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-d%7E3"></span>type(<a href='../type/carray_1d.html'>CArray_1D</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>D</strong></td><td><hr>
+<p>Local Varaibles
+   IOSTAT - THe status of he IO statement
+   IOMSG - The associate message with an error in the IO statement
+   i - do loop variable</p>
+<hr></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <br>
+    
+    
+     
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~read_carray_1d~~CalledByGraph Pages: 1 -->
+<svg id="procread_carray_1dCalledByGraph" width="454pt" height="72pt"
+ viewBox="0.00 0.00 454.01 71.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_carray_1d~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.5)">
+<title>proc~~read_carray_1d~~CalledByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-67.5 450.0112,-67.5 450.0112,4 -4,4"/>
+<!-- proc~read_carray_1d -->
+<g id="proc~~read_carray_1d~~CalledByGraph_node1" class="node">
+<title>proc~read_carray_1d</title>
+<polygon fill="none" stroke="#000000" points="445.9474,-42.2554 351.203,-42.2554 351.203,-20.2446 445.9474,-20.2446 445.9474,-42.2554"/>
+<text text-anchor="middle" x="398.5752" y="-28.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">Read_CArray_1D</text>
+</g>
+<!-- proc~read_data -->
+<g id="proc~~read_carray_1d~~CalledByGraph_node2" class="node">
+<title>proc~read_data</title>
+<g id="a_proc~~read_carray_1d~~CalledByGraph_node2"><a xlink:href=".././proc/read_data.html" xlink:title="Read_Data">
+<polygon fill="#d9534f" stroke="#d9534f" points="315.1995,-42.2554 249.9585,-42.2554 249.9585,-20.2446 315.1995,-20.2446 315.1995,-42.2554"/>
+<text text-anchor="middle" x="282.579" y="-28.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Data</text>
+</a>
+</g>
+</g>
+<!-- proc~read_data&#45;&gt;proc~read_carray_1d -->
+<g id="proc~~read_carray_1d~~CalledByGraph_edge1" class="edge">
+<title>proc~read_data&#45;&gt;proc~read_carray_1d</title>
+<path fill="none" stroke="#000000" d="M315.1991,-31.25C323.1941,-31.25 331.9906,-31.25 340.7809,-31.25"/>
+<polygon fill="#000000" stroke="#000000" points="341.0487,-34.7501 351.0486,-31.25 341.0486,-27.7501 341.0487,-34.7501"/>
+</g>
+<!-- proc~read_tm -->
+<g id="proc~~read_carray_1d~~CalledByGraph_node3" class="node">
+<title>proc~read_tm</title>
+<g id="a_proc~~read_carray_1d~~CalledByGraph_node3"><a xlink:href=".././proc/read_tm.html" xlink:title="Read_TM">
+<polygon fill="#d9534f" stroke="#d9534f" points="195.1102,-63.2554 136.9069,-63.2554 136.9069,-41.2446 195.1102,-41.2446 195.1102,-63.2554"/>
+<text text-anchor="middle" x="166.0085" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_TM</text>
+</a>
+</g>
+</g>
+<!-- proc~read_tm&#45;&gt;proc~read_data -->
+<g id="proc~~read_carray_1d~~CalledByGraph_edge2" class="edge">
+<title>proc~read_tm&#45;&gt;proc~read_data</title>
+<path fill="none" stroke="#000000" d="M195.1235,-47.005C208.6023,-44.5768 224.8853,-41.6434 239.7291,-38.9694"/>
+<polygon fill="#000000" stroke="#000000" points="240.5023,-42.3865 249.7234,-37.1689 239.2612,-35.4974 240.5023,-42.3865"/>
+</g>
+<!-- proc~read_trninput -->
+<g id="proc~~read_carray_1d~~CalledByGraph_node4" class="node">
+<title>proc~read_trninput</title>
+<g id="a_proc~~read_carray_1d~~CalledByGraph_node4"><a xlink:href=".././proc/read_trninput.html" xlink:title="Read_TRNINPUT">
+<polygon fill="#d9534f" stroke="#d9534f" points="214.0291,-22.2554 117.988,-22.2554 117.988,-.2446 214.0291,-.2446 214.0291,-22.2554"/>
+<text text-anchor="middle" x="166.0085" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_TRNINPUT</text>
+</a>
+</g>
+</g>
+<!-- proc~read_trninput&#45;&gt;proc~read_data -->
+<g id="proc~~read_carray_1d~~CalledByGraph_edge3" class="edge">
+<title>proc~read_trninput&#45;&gt;proc~read_data</title>
+<path fill="none" stroke="#000000" d="M214.0952,-19.5002C222.656,-20.969 231.5197,-22.4897 239.9163,-23.9304"/>
+<polygon fill="#000000" stroke="#000000" points="239.4272,-27.3975 249.875,-25.639 240.6109,-20.4983 239.4272,-27.3975"/>
+</g>
+<!-- program~hzetrn_trn -->
+<g id="proc~~read_carray_1d~~CalledByGraph_node5" class="node">
+<title>program~hzetrn_trn</title>
+<g id="a_proc~~read_carray_1d~~CalledByGraph_node5"><a xlink:href=".././program/hzetrn_trn.html" xlink:title="HZETRN_TRN">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="81.9974,-42.2554 .0009,-42.2554 .0009,-20.2446 81.9974,-20.2446 81.9974,-42.2554"/>
+<text text-anchor="middle" x="40.9991" y="-28.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HZETRN_TRN</text>
+</a>
+</g>
+</g>
+<!-- program~hzetrn_trn&#45;&gt;proc~read_tm -->
+<g id="proc~~read_carray_1d~~CalledByGraph_edge4" class="edge">
+<title>program~hzetrn_trn&#45;&gt;proc~read_tm</title>
+<path fill="none" stroke="#000000" d="M82.2784,-38.1844C96.5853,-40.5878 112.5758,-43.274 126.7182,-45.6497"/>
+<polygon fill="#000000" stroke="#000000" points="126.1972,-49.1112 136.6389,-47.3163 127.357,-42.2079 126.1972,-49.1112"/>
+</g>
+<!-- program~hzetrn_trn&#45;&gt;proc~read_trninput -->
+<g id="proc~~read_carray_1d~~CalledByGraph_edge5" class="edge">
+<title>program~hzetrn_trn&#45;&gt;proc~read_trninput</title>
+<path fill="none" stroke="#000000" d="M82.2784,-24.6458C90.4569,-23.3373 99.1857,-21.9409 107.8048,-20.5619"/>
+<polygon fill="#000000" stroke="#000000" points="108.5116,-23.9934 117.8331,-18.9575 107.4057,-17.0813 108.5116,-23.9934"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="550pt" height="31pt"
+ viewBox="0.00 0.00 550.25 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 546.2477,-26.5 546.2477,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="62.6818,-22.2554 .1058,-22.2554 .1058,-.2446 62.6818,-.2446 62.6818,-22.2554"/>
+<text text-anchor="middle" x="31.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="134.3938,-22.2554 80.3938,-22.2554 80.3938,-.2446 134.3938,-.2446 134.3938,-22.2554"/>
+<text text-anchor="middle" x="107.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="206.3938,-22.2554 152.3938,-22.2554 152.3938,-.2446 206.3938,-.2446 206.3938,-22.2554"/>
+<text text-anchor="middle" x="179.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="356.5315,-22.2554 224.2561,-22.2554 224.2561,-.2446 356.5315,-.2446 356.5315,-22.2554"/>
+<text text-anchor="middle" x="290.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="428.3938,-22.2554 374.3938,-22.2554 374.3938,-.2446 428.3938,-.2446 428.3938,-22.2554"/>
+<text text-anchor="middle" x="401.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="542.102,-22.2554 446.6856,-22.2554 446.6856,-.2446 542.102,-.2446 542.102,-22.2554"/>
+<text text-anchor="middle" x="494.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/read_carray_1d.html#src">Read_CArray_1D</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span>    <span class="k">Subroutine </span><span class="n">Read_CArray_1D</span> <span class="p">(</span> <span class="n">LU</span><span class="p">,</span> <span class="n">Binary</span><span class="p">,</span> <span class="n">D</span> <span class="p">)</span>
+<span class="c">!</span>
+<span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  Called by Read_Write_Basic_Mod.f90</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! This subroutine is for the CArray_1D derived type data read</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="k">Implicit None</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! LU - The logical unit for input</span>
+<span class="c">! Binary - Flag for binary or ASCII input</span>
+<span class="c">! D - The data to pass back and is of type CArray_1D</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="kt">Integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">LU</span>
+        <span class="kt">Logical</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Binary</span>
+        <span class="k">Type</span> <span class="p">(</span> <span class="n">CArray_1D</span> <span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">D</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Local Varaibles</span>
+<span class="c">!   IOSTAT - THe status of he IO statement</span>
+<span class="c">!   IOMSG - The associate message with an error in the IO statement</span>
+<span class="c">!   i - do loop variable</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="kt">Integer</span> <span class="kd">::</span> <span class="n">IOSTAT</span><span class="p">,</span> <span class="n">i</span>
+        <span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=</span><span class="n">IOMSG_SIZE</span><span class="p">)</span> <span class="kd">::</span> <span class="n">IOMSG</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Make sure the lower pointer is not allocated</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+<span class="n">DMAlcl</span><span class="p">:</span> <span class="k">If</span> <span class="p">(</span> <span class="nb">Allocated</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="n">lower</span> <span class="p">)</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Lower already Allocated - Deallocate&#39;</span>
+            <span class="k">Deallocate</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="n">lower</span> <span class="p">)</span>
+         <span class="k">End If </span><span class="n">DMAlcl</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Make sure the upper pointer is not allocated</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+<span class="n">DMAlcu</span><span class="p">:</span> <span class="k">If</span> <span class="p">(</span> <span class="nb">Allocated</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span> <span class="p">)</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Upper already Allocated - Deallocate&#39;</span>
+            <span class="k">Deallocate</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span> <span class="p">)</span>
+         <span class="k">End If </span><span class="n">DMAlcu</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Make sure the data pointer is not allocated</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+<span class="n">DAlc</span><span class="p">:</span>   <span class="k">If</span> <span class="p">(</span> <span class="nb">Allocated</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="k">Data</span> <span class="p">)</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Data already Allocated - Deallocate&#39;</span>
+            <span class="k">Deallocate</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="k">Data</span> <span class="p">)</span>
+        <span class="k">End If </span><span class="n">DAlc</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Allocate the lower and upper array boundaries</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="k">Allocate</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="n">lower</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">Dimen</span><span class="p">),</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">Dimen</span><span class="p">),</span> <span class="nb">stat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">errmsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span>
+<span class="n">DMerr</span><span class="p">:</span>  <span class="k">If</span> <span class="p">(</span><span class="n">IOSTAT</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,i0,1x,a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Dimension Allocation Error, IOSTAT = &#39;</span><span class="p">,</span> <span class="n">IOSTAT</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">IOMSG</span><span class="p">)</span>
+            <span class="k">Stop</span> <span class="s1">&#39;Abort Read_CArray_1D&#39;</span>
+        <span class="k">End If </span><span class="n">DMerr</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Read the lower and upper array boundaries from the data file: Binary or ASCII</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+<span class="n">DRDif</span><span class="p">:</span>  <span class="k">If</span> <span class="p">(</span> <span class="n">Binary</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Read</span> <span class="p">(</span> <span class="n">unit</span><span class="o">=</span><span class="n">LU</span><span class="p">,</span>        <span class="n">iostat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">iomsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span> <span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="n">lower</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">D</span><span class="p">%</span><span class="n">Dimen</span><span class="p">)</span>
+        <span class="k">Else</span>
+<span class="k">            Read</span> <span class="p">(</span> <span class="n">unit</span><span class="o">=</span><span class="n">LU</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=*</span><span class="p">,</span> <span class="n">iostat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">iomsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span> <span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="n">lower</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">D</span><span class="p">%</span><span class="n">Dimen</span><span class="p">)</span>
+        <span class="k">End If </span><span class="n">DRDif</span>
+<span class="n">RDMerr</span><span class="p">:</span> <span class="k">If</span> <span class="p">(</span><span class="n">IOSTAT</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,i0,1x,a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Dimension Read Error, IOSTAT = &#39;</span><span class="p">,</span> <span class="n">IOSTAT</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">IOMSG</span><span class="p">)</span>
+            <span class="k">Stop</span> <span class="s1">&#39;Abort Read_CArray_1D&#39;</span>
+        <span class="k">End If </span><span class="n">RDMerr</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Allocate the data array</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="k">Allocate</span> <span class="p">(</span> <span class="n">D</span><span class="p">%</span><span class="k">Data</span><span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="n">lower</span><span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="n">Dimen</span><span class="p">):</span><span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="n">Dimen</span><span class="p">)),</span> <span class="nb">stat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">errmsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span>        
+<span class="n">Derr</span><span class="p">:</span>   <span class="k">If</span> <span class="p">(</span><span class="n">IOSTAT</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,i0,1x,a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Data Allocation Error, IOSTAT = &#39;</span><span class="p">,</span> <span class="n">IOSTAT</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">IOMSG</span><span class="p">)</span>
+            <span class="k">Stop</span> <span class="s1">&#39;Abort Read_CArray_1D&#39;</span>
+        <span class="k">End If </span><span class="n">Derr</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Read the data array: Binary or ASCII</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+<span class="n">RDif</span><span class="p">:</span>   <span class="k">If</span> <span class="p">(</span> <span class="n">Binary</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Read</span> <span class="p">(</span> <span class="n">unit</span><span class="o">=</span><span class="n">LU</span><span class="p">,</span>        <span class="n">iostat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">iomsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span> <span class="n">D</span><span class="p">%</span><span class="k">Data</span>
+<span class="k">        Else</span>
+<span class="k">            Read</span> <span class="p">(</span> <span class="n">unit</span><span class="o">=</span><span class="n">LU</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=*</span><span class="p">,</span> <span class="n">iostat</span><span class="o">=</span><span class="n">IOSTAT</span><span class="p">,</span> <span class="n">iomsg</span><span class="o">=</span><span class="n">IOMSG</span> <span class="p">)</span> <span class="n">D</span><span class="p">%</span><span class="k">Data</span>
+<span class="k">        End If </span><span class="n">RDif</span>
+<span class="n">RDerr</span><span class="p">:</span>  <span class="k">If</span> <span class="p">(</span><span class="n">IOSTAT</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">            Write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,i0,1x,a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Data Read Error, IOSTAT = &#39;</span><span class="p">,</span> <span class="n">IOSTAT</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">IOMSG</span><span class="p">)</span>
+            <span class="k">Stop</span> <span class="s1">&#39;Abort Read_CArray_1D&#39;</span>
+        <span class="k">End If </span><span class="n">RDerr</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Type_CArray_1D_Mod: D%upper(1) = &#39;</span><span class="p">,</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">D</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Type_CArray_1D_Mod: D%Data(i)  = &#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">D</span><span class="p">%</span><span class="k">Data</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="n">enddo</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! Return to the calling program</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+        <span class="k">Return</span>
+<span class="c">!</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">! End for read CArray_1D</span>
+<span class="c">!**********************************************************************************************************************************</span>
+<span class="c">!</span>
+    <span class="k">End Subroutine </span><span class="n">Read_CArray_1D</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2018 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2018-10-16 22:22  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> quarantine was developed by </p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

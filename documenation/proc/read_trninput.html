@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A bug isolation demo">
+    
+    <meta name="author" content="" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Read_TRNINPUT &ndash; quarantine</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">quarantine </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/hzetrn_trn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/hzetrn_trn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>Read_TRNINPUT
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="11.1% of total for procedures.">34 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/Read_Write_TRNINPUT_Mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/read_write_trninput_mod.f90.html'>Read_Write_TRNINPUT_Mod.f90</a></li>
+    
+     <li><a href='../module/read_write_trninput_mod.html'>Read_Write_TRNINPUT_Mod</a></li>
+    
+  
+     <li class="active">Read_TRNINPUT</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/read_trninput.html#src">Read_TRNINPUT</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine Read_TRNINPUT(FILE, u, C, ACCESS, Quite)
+    
+    
+   
+</h2>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/read_write_basic_mod.html'>Read_Write_Basic_Mod</a></li>
+    
+    <li><a href='../module/type_carray_1d_mod.html'>Type_CArray_1D_Mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~read_trninput~~UsesGraph Pages: 1 -->
+<svg id="procread_trninputUsesGraph" width="394pt" height="72pt"
+ viewBox="0.00 0.00 393.59 71.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_trninput~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.5)">
+<title>proc~~read_trninput~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-67.5 389.5886,-67.5 389.5886,4 -4,4"/>
+<!-- proc~read_trninput -->
+<g id="proc~~read_trninput~~UsesGraph_node1" class="node">
+<title>proc~read_trninput</title>
+<polygon fill="none" stroke="#000000" points="385.5989,-42.2554 289.5579,-42.2554 289.5579,-20.2446 385.5989,-20.2446 385.5989,-42.2554"/>
+<text text-anchor="middle" x="337.5784" y="-28.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">Read_TRNINPUT</text>
+</g>
+<!-- module~type_carray_1d_mod -->
+<g id="proc~~read_trninput~~UsesGraph_node2" class="node">
+<title>module~type_carray_1d_mod</title>
+<g id="a_proc~~read_trninput~~UsesGraph_node2"><a xlink:href=".././module/type_carray_1d_mod.html" xlink:title="Type_CArray_1D_Mod">
+<polygon fill="#337ab7" stroke="#337ab7" points="250.356,-63.2554 131.7463,-63.2554 131.7463,-41.2446 250.356,-41.2446 250.356,-63.2554"/>
+<text text-anchor="middle" x="191.0511" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Type_CArray_1D_Mod</text>
+</a>
+</g>
+</g>
+<!-- proc~read_trninput&#45;&gt;module~type_carray_1d_mod -->
+<g id="proc~~read_trninput~~UsesGraph_edge1" class="edge">
+<title>proc~read_trninput&#45;&gt;module~type_carray_1d_mod</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M289.1938,-38.1844C279.9754,-39.5055 270.1607,-40.9122 260.4373,-42.3057"/>
+<polygon fill="#000000" stroke="#000000" points="259.7687,-38.8657 250.3664,-43.7491 260.7618,-45.7949 259.7687,-38.8657"/>
+</g>
+<!-- module~read_write_basic_mod -->
+<g id="proc~~read_trninput~~UsesGraph_node3" class="node">
+<title>module~read_write_basic_mod</title>
+<g id="a_proc~~read_trninput~~UsesGraph_node3"><a xlink:href=".././module/read_write_basic_mod.html" xlink:title="Read_Write_Basic_Mod">
+<polygon fill="#337ab7" stroke="#337ab7" points="253.5851,-22.2554 128.5172,-22.2554 128.5172,-.2446 253.5851,-.2446 253.5851,-22.2554"/>
+<text text-anchor="middle" x="191.0511" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Write_Basic_Mod</text>
+</a>
+</g>
+</g>
+<!-- proc~read_trninput&#45;&gt;module~read_write_basic_mod -->
+<g id="proc~~read_trninput~~UsesGraph_edge2" class="edge">
+<title>proc~read_trninput&#45;&gt;module~read_write_basic_mod</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M289.1938,-24.6458C281.0454,-23.5336 272.4311,-22.3578 263.8257,-21.1833"/>
+<polygon fill="#000000" stroke="#000000" points="264.1379,-17.6935 253.7564,-19.8089 263.1912,-24.6292 264.1379,-17.6935"/>
+</g>
+<!-- module~parameters_mod -->
+<g id="proc~~read_trninput~~UsesGraph_node4" class="node">
+<title>module~parameters_mod</title>
+<g id="a_proc~~read_trninput~~UsesGraph_node4"><a xlink:href=".././module/parameters_mod.html" xlink:title="Parameters_Mod">
+<polygon fill="#337ab7" stroke="#337ab7" points="92.3024,-42.2554 .2317,-42.2554 .2317,-20.2446 92.3024,-20.2446 92.3024,-42.2554"/>
+<text text-anchor="middle" x="46.2671" y="-28.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Parameters_Mod</text>
+</a>
+</g>
+</g>
+<!-- module~type_carray_1d_mod&#45;&gt;module~parameters_mod -->
+<g id="proc~~read_trninput~~UsesGraph_edge3" class="edge">
+<title>module~type_carray_1d_mod&#45;&gt;module~parameters_mod</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.7442,-43.6479C122.1093,-42.2504 112.1546,-40.8066 102.5936,-39.4198"/>
+<polygon fill="#000000" stroke="#000000" points="102.8061,-35.9141 92.4073,-37.9423 101.8013,-42.8416 102.8061,-35.9141"/>
+</g>
+<!-- module~read_write_basic_mod&#45;&gt;module~parameters_mod -->
+<g id="proc~~read_trninput~~UsesGraph_edge4" class="edge">
+<title>module~read_write_basic_mod&#45;&gt;module~parameters_mod</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M128.3888,-19.906C119.8042,-21.0918 111.0336,-22.3034 102.5718,-23.4722"/>
+<polygon fill="#000000" stroke="#000000" points="101.8638,-20.0367 92.4368,-24.8723 102.8217,-26.9709 101.8638,-20.0367"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file%7E3"></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>FILE</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u"></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>Target</td><td>::</td>
+  <td><strong>u</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c"></span>character(len=CLEN_SIZE),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>Target, Allocatable, Dimension(:)</td><td>::</td>
+  <td><strong>C</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-access%7E2"></span>character(len=3),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>ACCESS</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-quite%7E2"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>Quite</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~read_trninput~~CallsGraph Pages: 1 -->
+<svg id="procread_trninputCallsGraph" width="356pt" height="113pt"
+ viewBox="0.00 0.00 356.45 112.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_trninput~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 108.5)">
+<title>proc~~read_trninput~~CallsGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-108.5 352.449,-108.5 352.449,4 -4,4"/>
+<!-- proc~read_trninput -->
+<g id="proc~~read_trninput~~CallsGraph_node1" class="node">
+<title>proc~read_trninput</title>
+<polygon fill="none" stroke="#000000" points="96.0308,-63.2554 -.0103,-63.2554 -.0103,-41.2446 96.0308,-41.2446 96.0308,-63.2554"/>
+<text text-anchor="middle" x="48.0103" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">Read_TRNINPUT</text>
+</g>
+<!-- proc~read_data -->
+<g id="proc~~read_trninput~~CallsGraph_node2" class="node">
+<title>proc~read_data</title>
+<g id="a_proc~~read_trninput~~CallsGraph_node2"><a xlink:href=".././proc/read_data.html" xlink:title="Read_Data">
+<polygon fill="#d9534f" stroke="#d9534f" points="197.2012,-63.2554 131.9602,-63.2554 131.9602,-41.2446 197.2012,-41.2446 197.2012,-63.2554"/>
+<text text-anchor="middle" x="164.5807" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Data</text>
+</a>
+</g>
+</g>
+<!-- proc~read_trninput&#45;&gt;proc~read_data -->
+<g id="proc~~read_trninput~~CallsGraph_edge1" class="edge">
+<title>proc~read_trninput&#45;&gt;proc~read_data</title>
+<path fill="none" stroke="#000000" d="M96.0969,-52.25C104.5636,-52.25 113.3266,-52.25 121.6411,-52.25"/>
+<polygon fill="#000000" stroke="#000000" points="121.8768,-55.7501 131.8767,-52.25 121.8767,-48.7501 121.8768,-55.7501"/>
+</g>
+<!-- proc~read_target_material -->
+<g id="proc~~read_trninput~~CallsGraph_node3" class="node">
+<title>proc~read_target_material</title>
+<g id="a_proc~~read_trninput~~CallsGraph_node3"><a xlink:href=".././proc/read_target_material.html" xlink:title="Read_Target_Material">
+<polygon fill="#d9534f" stroke="#d9534f" points="348.6034,-104.2554 232.9864,-104.2554 232.9864,-82.2446 348.6034,-82.2446 348.6034,-104.2554"/>
+<text text-anchor="middle" x="290.7949" y="-90.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_Target_Material</text>
+</a>
+</g>
+</g>
+<!-- proc~read_data&#45;&gt;proc~read_target_material -->
+<g id="proc~~read_trninput~~CallsGraph_edge2" class="edge">
+<title>proc~read_data&#45;&gt;proc~read_target_material</title>
+<path fill="none" stroke="#000000" d="M197.4125,-62.9152C212.5342,-67.8274 230.6952,-73.7269 246.9652,-79.0122"/>
+<polygon fill="#000000" stroke="#000000" points="246.215,-82.4484 256.8071,-82.2092 248.3777,-75.7909 246.215,-82.4484"/>
+</g>
+<!-- proc~output_bytes -->
+<g id="proc~~read_trninput~~CallsGraph_node4" class="node">
+<title>proc~output_bytes</title>
+<g id="a_proc~~read_trninput~~CallsGraph_node4"><a xlink:href=".././proc/output_bytes.html" xlink:title="Output_Bytes">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="328.4162,-63.2554 253.1736,-63.2554 253.1736,-41.2446 328.4162,-41.2446 328.4162,-63.2554"/>
+<text text-anchor="middle" x="290.7949" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Output_Bytes</text>
+</a>
+</g>
+</g>
+<!-- proc~read_data&#45;&gt;proc~output_bytes -->
+<g id="proc~~read_trninput~~CallsGraph_edge3" class="edge">
+<title>proc~read_data&#45;&gt;proc~output_bytes</title>
+<path fill="none" stroke="#000000" d="M197.4125,-52.25C211.1806,-52.25 227.4684,-52.25 242.5543,-52.25"/>
+<polygon fill="#000000" stroke="#000000" points="242.7607,-55.7501 252.7607,-52.25 242.7606,-48.7501 242.7607,-55.7501"/>
+</g>
+<!-- proc~read_carray_1d -->
+<g id="proc~~read_trninput~~CallsGraph_node5" class="node">
+<title>proc~read_carray_1d</title>
+<g id="a_proc~~read_trninput~~CallsGraph_node5"><a xlink:href=".././proc/read_carray_1d.html" xlink:title="Read_CArray_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="338.1671,-22.2554 243.4228,-22.2554 243.4228,-.2446 338.1671,-.2446 338.1671,-22.2554"/>
+<text text-anchor="middle" x="290.7949" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Read_CArray_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~read_data&#45;&gt;proc~read_carray_1d -->
+<g id="proc~~read_trninput~~CallsGraph_edge4" class="edge">
+<title>proc~read_data&#45;&gt;proc~read_carray_1d</title>
+<path fill="none" stroke="#000000" d="M197.4125,-41.5848C212.5342,-36.6726 230.6952,-30.7731 246.9652,-25.4878"/>
+<polygon fill="#000000" stroke="#000000" points="248.3777,-28.7091 256.8071,-22.2908 246.215,-22.0516 248.3777,-28.7091"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="550pt" height="31pt"
+ viewBox="0.00 0.00 550.25 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 546.2477,-26.5 546.2477,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="62.6818,-22.2554 .1058,-22.2554 .1058,-.2446 62.6818,-.2446 62.6818,-22.2554"/>
+<text text-anchor="middle" x="31.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="134.3938,-22.2554 80.3938,-22.2554 80.3938,-.2446 134.3938,-.2446 134.3938,-22.2554"/>
+<text text-anchor="middle" x="107.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="206.3938,-22.2554 152.3938,-22.2554 152.3938,-.2446 206.3938,-.2446 206.3938,-22.2554"/>
+<text text-anchor="middle" x="179.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="356.5315,-22.2554 224.2561,-22.2554 224.2561,-.2446 356.5315,-.2446 356.5315,-22.2554"/>
+<text text-anchor="middle" x="290.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="428.3938,-22.2554 374.3938,-22.2554 374.3938,-.2446 428.3938,-.2446 428.3938,-22.2554"/>
+<text text-anchor="middle" x="401.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="542.102,-22.2554 446.6856,-22.2554 446.6856,-.2446 542.102,-.2446 542.102,-22.2554"/>
+<text text-anchor="middle" x="494.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+     
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~read_trninput~~CalledByGraph Pages: 1 -->
+<svg id="procread_trninputCalledByGraph" width="222pt" height="31pt"
+ viewBox="0.00 0.00 222.02 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~read_trninput~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>proc~~read_trninput~~CalledByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 218.0188,-26.5 218.0188,4 -4,4"/>
+<!-- proc~read_trninput -->
+<g id="proc~~read_trninput~~CalledByGraph_node1" class="node">
+<title>proc~read_trninput</title>
+<polygon fill="none" stroke="#000000" points="214.0291,-22.2554 117.988,-22.2554 117.988,-.2446 214.0291,-.2446 214.0291,-22.2554"/>
+<text text-anchor="middle" x="166.0085" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">Read_TRNINPUT</text>
+</g>
+<!-- program~hzetrn_trn -->
+<g id="proc~~read_trninput~~CalledByGraph_node2" class="node">
+<title>program~hzetrn_trn</title>
+<g id="a_proc~~read_trninput~~CalledByGraph_node2"><a xlink:href=".././program/hzetrn_trn.html" xlink:title="HZETRN_TRN">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="81.9974,-22.2554 .0009,-22.2554 .0009,-.2446 81.9974,-.2446 81.9974,-22.2554"/>
+<text text-anchor="middle" x="40.9991" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HZETRN_TRN</text>
+</a>
+</g>
+</g>
+<!-- program~hzetrn_trn&#45;&gt;proc~read_trninput -->
+<g id="proc~~read_trninput~~CalledByGraph_edge1" class="edge">
+<title>program~hzetrn_trn&#45;&gt;proc~read_trninput</title>
+<path fill="none" stroke="#000000" d="M82.2784,-11.25C90.4569,-11.25 99.1857,-11.25 107.8048,-11.25"/>
+<polygon fill="#000000" stroke="#000000" points="107.8332,-14.7501 117.8331,-11.25 107.8331,-7.7501 107.8332,-14.7501"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="550pt" height="31pt"
+ viewBox="0.00 0.00 550.25 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 546.2477,-26.5 546.2477,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="62.6818,-22.2554 .1058,-22.2554 .1058,-.2446 62.6818,-.2446 62.6818,-22.2554"/>
+<text text-anchor="middle" x="31.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="134.3938,-22.2554 80.3938,-22.2554 80.3938,-.2446 134.3938,-.2446 134.3938,-22.2554"/>
+<text text-anchor="middle" x="107.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="206.3938,-22.2554 152.3938,-22.2554 152.3938,-.2446 206.3938,-.2446 206.3938,-22.2554"/>
+<text text-anchor="middle" x="179.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="356.5315,-22.2554 224.2561,-22.2554 224.2561,-.2446 356.5315,-.2446 356.5315,-22.2554"/>
+<text text-anchor="middle" x="290.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="428.3938,-22.2554 374.3938,-22.2554 374.3938,-.2446 428.3938,-.2446 428.3938,-22.2554"/>
+<text text-anchor="middle" x="401.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="542.102,-22.2554 446.6856,-22.2554 446.6856,-.2446 542.102,-.2446 542.102,-22.2554"/>
+<text text-anchor="middle" x="494.3938" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/read_trninput.html#src">Read_TRNINPUT</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span>  <span class="k">Subroutine </span><span class="n">Read_TRNINPUT</span> <span class="p">(</span> <span class="k">FILE</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="nb">ACCESS</span><span class="p">,</span> <span class="n">Quite</span> <span class="p">)</span>
+<span class="c">!</span>
+    <span class="k">Use </span><span class="n">Read_Write_Basic_Mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">Read_Data</span>
+    <span class="k">Use </span><span class="n">Type_CArray_1D_Mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">CArray_1D</span>
+<span class="c">!</span>
+    <span class="k">Implicit None</span>
+<span class="c">!</span>
+    <span class="kt">Integer</span><span class="p">,</span>                  <span class="k">Target</span><span class="p">,</span>                            <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">u</span>
+    <span class="kt">Character</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="n">CLEN_SIZE</span><span class="p">),</span> <span class="k">Target</span><span class="p">,</span> <span class="k">Allocatable</span><span class="p">,</span> <span class="k">Dimension</span><span class="p">(:),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">C</span>
+    <span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=*</span><span class="p">),</span>                                            <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="k">FILE</span>
+<span class="k">    </span><span class="kt">Character</span><span class="p">(</span><span class="nb">Len</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="k">Optional</span><span class="p">,</span>                                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="nb">ACCESS</span>
+<span class="nb">    </span><span class="kt">Integer</span><span class="p">,</span>          <span class="k">Optional</span><span class="p">,</span>                                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">Quite</span>
+<span class="c">!</span>
+    <span class="kt">Integer</span>                                                                  <span class="kd">::</span> <span class="n">i</span>
+    <span class="k">Type</span> <span class="p">(</span><span class="n">CArray_1D</span><span class="p">),</span>         <span class="k">Target</span>                                         <span class="kd">::</span> <span class="n">A_t</span>
+    <span class="k">Class</span><span class="p">(</span><span class="o">*</span><span class="p">),</span>                 <span class="k">Pointer</span>                                        <span class="kd">::</span> <span class="n">Data_up</span>
+<span class="c">!</span>
+    <span class="n">Data_up</span> <span class="o">=&gt;</span> <span class="n">A_t</span>
+    <span class="k">If</span> <span class="p">(</span> <span class="nb">Present</span><span class="p">(</span><span class="n">Quite</span><span class="p">)</span> <span class="p">)</span> <span class="k">Then</span>
+<span class="k">       Call </span><span class="n">Read_Data</span> <span class="p">(</span> <span class="k">FILE</span><span class="p">,</span> <span class="n">Data_up</span><span class="p">,</span> <span class="nb">ACCESS</span><span class="p">,</span> <span class="n">Quite</span><span class="o">=</span><span class="n">Quite</span> <span class="p">)</span>
+    <span class="k">Else</span>
+<span class="k">       Call </span><span class="n">Read_Data</span> <span class="p">(</span> <span class="k">FILE</span><span class="p">,</span> <span class="n">Data_up</span><span class="p">,</span> <span class="nb">ACCESS</span> <span class="p">)</span>
+    <span class="k">End If</span>
+<span class="c">!</span>
+    <span class="k">Select Type</span> <span class="p">(</span> <span class="n">Data_up</span> <span class="p">)</span>
+    <span class="k">Type is</span> <span class="p">(</span> <span class="n">CArray_1D</span> <span class="p">)</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Read_Write_TRNINPUT: A_t%upper   = &#39;</span><span class="p">,</span> <span class="n">A_t</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;    ---    SHOULD BE 3 but is not&#39;</span>
+<span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">A_t</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Read_Write_TRNINPUT: A_t%Data(i) = &#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">A_t</span><span class="p">%</span><span class="k">Data</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span> <span class="s1">&#39;    ---    SEGFAULT&#39;</span>
+<span class="k">end do</span>
+<span class="k">       </span><span class="n">u</span> <span class="o">=</span> <span class="n">A_t</span><span class="p">%</span><span class="n">upper</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+       <span class="k">Allocate</span> <span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">u</span><span class="p">)</span> <span class="p">)</span>
+       <span class="n">C</span> <span class="o">=</span> <span class="n">A_t</span><span class="p">%</span><span class="k">Data</span>
+<span class="k">    End Select</span>
+<span class="k">    Nullify</span> <span class="p">(</span> <span class="n">Data_up</span> <span class="p">)</span>
+<span class="c">!</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Read_Write_TRNINPUT: u    = &#39;</span><span class="p">,</span> <span class="n">u</span>
+<span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">u</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Read_Write_TRNINPUT: C(i) = &#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="k">end do</span>
+<span class="c">!</span>
+  <span class="k">End Subroutine </span><span class="n">Read_TRNINPUT</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2018 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2018-10-16 22:22  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> quarantine was developed by </p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
