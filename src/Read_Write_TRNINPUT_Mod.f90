@@ -1,6 +1,6 @@
 Module Read_Write_TRNINPUT_Mod
 !
-  Use Parameters_Mod
+  Use Parameters_Mod, only : CLEN_SIZE
 !
 ! No explicit typing
   Implicit None
