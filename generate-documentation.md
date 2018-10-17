@@ -1,7 +1,7 @@
 project: quarantine
 summary: A bug isolation demo
 src_dir: .
-output_dir: documenation
+output_dir: documenation/refactored
 preprocess: true
 display: public
          protected

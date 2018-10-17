@@ -70,5 +70,5 @@ The following tests FAILED:
 Errors while running CTest
 ```
 
-[documentation]: http://htmlpreview.github.io/?https://github.com/sourceryinstitute/quarantine/blob/master/documenation/index.html
+[documentation]: http://htmlpreview.github.io/?https://github.com/sourceryinstitute/quarantine/blob/master/documenation/original/index.html
 [FORD]: https://github.com/cmacmackin/ford
