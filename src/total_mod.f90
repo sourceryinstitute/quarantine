@@ -6,24 +6,22 @@ Module total_mod
       Character(LEN=1024), Allocatable, Dimension(:) :: Data
   End Type
 Contains
-  Subroutine Read_Data ( FILE, Data_up )
+  Subroutine Read_Data ( Data_up )
     Class(*), Pointer,          intent(in)    :: Data_up
-    Character(Len=*),           intent(in)    :: FILE
     Integer                   :: LU
-    Open ( newunit=LU, file=trim(FILE), status='old', form=trim('formatted'), action='read' )
+    Open ( newunit=LU, file=trim('trninput.dat'), status='old', form=trim('formatted'), action='read' )
     Select Type ( Data_up )
         Type is ( CArray_1D )
             Call Read_CArray_1D ( LU, Data_up )
     End Select
     Close ( unit=LU )
   End Subroutine
-  Subroutine Read_TRNINPUT ( FILE)
-    Character(Len=*),                                            intent(in)  :: FILE
+  Subroutine Read_TRNINPUT ( )
     Integer                                                                  :: i
     Type (CArray_1D),         Target                                         :: A_t
     Class(*),                 Pointer                                        :: Data_up
     Data_up => A_t
-    Call Read_Data ( FILE, Data_up )
+    Call Read_Data ( Data_up )
     Select Type ( Data_up )
     Type is ( CArray_1D )
       print *, 'Read_Write_TRNINPUT: A_t%upper   = ', A_t%upper(1), '    ---    SHOULD BE 3 but is not'

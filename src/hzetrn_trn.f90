@@ -1,4 +1,4 @@
-    Use total_mod, only : READ_TRNINPUT
+    Use total_mod
     Implicit None
-    Call Read_TRNINPUT ('trninput.dat')
+    Call Read_TRNINPUT
 End
