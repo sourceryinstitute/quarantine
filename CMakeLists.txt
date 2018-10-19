@@ -7,4 +7,3 @@ set(CMAKE_Fortran_FLAGS "-ffree-form -ffree-line-length-0 -O3 -mtune=native -fin
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(input)

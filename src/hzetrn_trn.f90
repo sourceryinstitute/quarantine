@@ -6,7 +6,7 @@ contains
     type (vector), target :: a
     class(*), pointer :: a_ptr
     a_ptr => a
-    call read_elements ( a_ptr )
+    call set_elements ( a_ptr )
     select Type ( a_ptr )
     type is ( vector )
       print *, a%upper(1), '<-- should be 1'
