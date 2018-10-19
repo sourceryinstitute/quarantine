@@ -12,7 +12,7 @@ Contains
         Type is ( vector )
           Allocate ( input%upper(1) )
           Read (1,*) input%upper(1)
-          Allocate ( input%elements(1:input%upper(1)) )
+          Allocate ( input%elements(input%upper(1)) )
           Read (1,*) input%elements
     End Select
   End Subroutine
