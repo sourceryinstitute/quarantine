@@ -8,13 +8,13 @@ Module total_mod
 Contains
   Subroutine Read_Data ( Data_up )
     Class(*), Pointer,          intent(in)    :: Data_up
-    Integer                   :: LU,i
+    Integer                   :: LU
     Open ( newunit=LU, file=trim('trninput.dat'), status='old', form=trim('formatted'), action='read' )
     Select Type ( Data_up )
         Type is ( CArray_1D )
-              Allocate ( Data_up%lower(data_up%Dimen), Data_up%upper(data_up%Dimen) )
-              Read ( unit=LU, fmt=* ) (Data_up%lower(i), Data_up%upper(i), i=1,Data_up%Dimen)
-              Allocate ( Data_up%Data(Data_up%lower(Data_up%Dimen):Data_up%upper(Data_up%Dimen)) )
+              Allocate ( Data_up%lower(1), Data_up%upper(1) )
+              Read ( unit=LU, fmt=* ) Data_up%lower(1), Data_up%upper(1)
+              Allocate ( Data_up%Data(Data_up%lower(1):Data_up%upper(1)) )
               Read ( unit=LU, fmt=* ) Data_up%Data
     End Select
     Close ( unit=LU )
