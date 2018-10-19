@@ -1,7 +1,6 @@
 Module total_mod
   Implicit None
   Type CArray_1D
-      Integer :: Dimen=1
       Integer, Allocatable, Dimension(:) :: lower, upper
       Character(LEN=1024), Allocatable, Dimension(:) :: Data
   End Type
@@ -9,7 +8,7 @@ Contains
   Subroutine Read_Data ( Data_up )
     Class(*), Pointer,          intent(in)    :: Data_up
     Integer                   :: LU
-    Open ( newunit=LU, file=trim('trninput.dat'), status='old', form=trim('formatted'), action='read' )
+    Open ( newunit=LU, file='trninput.dat', status='old', form='formatted', action='read' )
     Select Type ( Data_up )
         Type is ( CArray_1D )
               Allocate ( Data_up%lower(1), Data_up%upper(1) )
