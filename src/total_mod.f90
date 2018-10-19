@@ -12,8 +12,6 @@ Contains
       type is ( vector )
         allocate ( input%upper(1) )
         read (1,*) input%upper
-        allocate ( input%elements(input%upper(1)) )
-        read (1,*) input%elements
     end select
   end subroutine
 end module

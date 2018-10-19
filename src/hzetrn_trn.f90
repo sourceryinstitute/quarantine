@@ -10,7 +10,6 @@ contains
     select Type ( a_ptr )
     type is ( vector )
       print *, a%upper(1), '<-- should be 1'
-      print *, trim(a%elements(1)), '<--- seg fault'
     end select
   end subroutine
 end
