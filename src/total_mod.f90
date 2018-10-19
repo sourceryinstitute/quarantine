@@ -16,15 +16,4 @@ Contains
           Read (1,*) input%elements
     End Select
   End Subroutine
-  Subroutine Read_TRNINPUT()
-    Type (vector), Target :: a
-    Class(*), Pointer :: a_ptr
-    a_ptr => a
-    Call Read_elements ( a_ptr )
-    Select Type ( a_ptr )
-    Type is ( vector )
-      print *, a%upper(1), '<-- should be 3'
-      print *, trim(a%elements(1)), '<--- seg fault'
-    End Select
-  End Subroutine
 End Module
