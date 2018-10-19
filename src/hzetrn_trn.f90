@@ -1,16 +1,16 @@
-    Implicit None
-    Call Read_TRNINPUT
-Contains
-  Subroutine Read_TRNINPUT()
-    Use total_mod
-    Type (vector), Target :: a
-    Class(*), Pointer :: a_ptr
+  implicit none
+  call read_input
+contains
+  subroutine read_input()
+    use total_mod
+    type (vector), target :: a
+    class(*), pointer :: a_ptr
     a_ptr => a
-    Call Read_elements ( a_ptr )
-    Select Type ( a_ptr )
-    Type is ( vector )
-      print *, a%upper(1), '<-- should be 3'
+    call read_elements ( a_ptr )
+    select Type ( a_ptr )
+    type is ( vector )
+      print *, a%upper(1), '<-- should be 1'
       print *, trim(a%elements(1)), '<--- seg fault'
-    End Select
-  End Subroutine
-End
+    end select
+  end subroutine
+end
