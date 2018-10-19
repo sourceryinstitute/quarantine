@@ -1,32 +1,30 @@
 Module total_mod
   Implicit None
-  Type CArray_1D
-      Integer, Allocatable, Dimension(:) :: lower, upper
-      Character(LEN=1024), Allocatable, Dimension(:) :: Data
+  Type vector
+      Integer, Allocatable, Dimension(:) :: upper
+      Character(LEN=1024), Allocatable, Dimension(:) :: elements
   End Type
 Contains
-  Subroutine Read_Data ( Data_up )
-    Class(*), Pointer,          intent(in)    :: Data_up
-    Integer                   :: LU
-    Open ( newunit=LU, file='trninput.dat', status='old', form='formatted', action='read' )
-    Select Type ( Data_up )
-        Type is ( CArray_1D )
-              Allocate ( Data_up%lower(1), Data_up%upper(1) )
-              Read ( unit=LU, fmt=* ) Data_up%lower(1), Data_up%upper(1)
-              Allocate ( Data_up%Data(Data_up%lower(1):Data_up%upper(1)) )
-              Read ( unit=LU, fmt=* ) Data_up%Data
+  Subroutine Read_elements ( input )
+    Class(*), Pointer, intent(in) :: input
+    Open (unit=1,file='trninput.dat',status='old',form='formatted')
+    Select Type ( input )
+        Type is ( vector )
+          Allocate ( input%upper(1) )
+          Read (1,*) input%upper(1)
+          Allocate ( input%elements(1:input%upper(1)) )
+          Read (1,*) input%elements
     End Select
-    Close ( unit=LU )
   End Subroutine
-  Subroutine Read_TRNINPUT ( )
-    Type (CArray_1D),         Target                                         :: A_t
-    Class(*),                 Pointer                                        :: Data_up
-    Data_up => A_t
-    Call Read_Data ( Data_up )
-    Select Type ( Data_up )
-    Type is ( CArray_1D )
-      print *, 'Read_Write_TRNINPUT: A_t%upper   = ', A_t%upper(1), '    ---    SHOULD BE 3 but is not'
-      print *, 'Read_Write_TRNINPUT: A_t%Data(i) = ', trim(A_t%Data(1)), '    ---    SEGFAULT'
+  Subroutine Read_TRNINPUT()
+    Type (vector), Target :: a
+    Class(*), Pointer :: a_ptr
+    a_ptr => a
+    Call Read_elements ( a_ptr )
+    Select Type ( a_ptr )
+    Type is ( vector )
+      print *, a%upper(1), '<-- should be 3'
+      print *, trim(a%elements(1)), '<--- seg fault'
     End Select
   End Subroutine
 End Module
