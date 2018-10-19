@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12) # Older versions will almost certainly work
 
 project(quarantine LANGUAGES Fortran)
 
-set(CMAKE_Fortran_FLAGS "-O3")
+set(CMAKE_Fortran_FLAGS "-O1")
 
 enable_testing()
 
