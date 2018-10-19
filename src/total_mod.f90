@@ -8,11 +8,14 @@ Module total_mod
 Contains
   Subroutine Read_Data ( Data_up )
     Class(*), Pointer,          intent(in)    :: Data_up
-    Integer                   :: LU
+    Integer                   :: LU,i
     Open ( newunit=LU, file=trim('trninput.dat'), status='old', form=trim('formatted'), action='read' )
     Select Type ( Data_up )
         Type is ( CArray_1D )
-            Call Read_CArray_1D ( LU, Data_up )
+              Allocate ( Data_up%lower(data_up%Dimen), Data_up%upper(data_up%Dimen) )
+              Read ( unit=LU, fmt=* ) (Data_up%lower(i), Data_up%upper(i), i=1,Data_up%Dimen)
+              Allocate ( Data_up%Data(Data_up%lower(Data_up%Dimen):Data_up%upper(Data_up%Dimen)) )
+              Read ( unit=LU, fmt=* ) Data_up%Data
     End Select
     Close ( unit=LU )
   End Subroutine
@@ -29,14 +32,5 @@ Contains
         print *, 'Read_Write_TRNINPUT: A_t%Data(i) = ', i, trim(A_t%Data(i)), '    ---    SEGFAULT'
       end do
     End Select
-  End Subroutine
-  Subroutine Read_CArray_1D ( LU, D )
-    Integer, intent(in) :: LU
-    Type ( CArray_1D ), intent(out) :: D
-    Integer :: i
-    Allocate ( D%lower(d%Dimen), D%upper(d%Dimen) )
-    Read ( unit=LU, fmt=* ) (D%lower(i), D%upper(i), i=1,D%Dimen)
-    Allocate ( D%Data(D%lower(D%Dimen):D%upper(D%Dimen)) )
-    Read ( unit=LU, fmt=* ) D%Data
   End Subroutine
 End Module
